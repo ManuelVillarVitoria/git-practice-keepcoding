@@ -1,40 +1,42 @@
 # `Práctica de GIT y Github`
 
 
-## Preguntas & Respuestas ✒️
+## ✒️ Preguntas & Respuestas 
+
+<br />
 
 1. **¿Qué comando utilizaste en el paso 11? ¿Por qué?**<br />
    
-<code>git reset --hard HEAD</code> (Para volver a la posición del commit anterior y deshacer los cambios de código)<br /><br />
+   <code>git reset --hard HEAD</code> (Para volver a la posición del commit anterior y deshacer los cambios de código)<br /><br />
 
 2. **¿Qué comando o comandos utilizaste en el paso 12? ¿Por qué?**<br />
 
-<code>git reflog</code> (para mostrar todos los movimientos del HEAD y ver el commit donde aún no se habían desecho los cambios)<br />
-<code>git reset --hard 0772dbe</code>(para reahcer el último commit posicionando el HEAD en el Hash '0772dbe' y recuperar así los cambios)<br /><br />
+    <code>git reflog</code> (para mostrar todos los movimientos del HEAD y ver el commit donde aún no se habían desecho los cambios)<br />
+    <code>git reset --hard 0772dbe</code>(para rehacer el último commit posicionando el HEAD en el Hash '0772dbe' y recuperar así los cambios)<br /><br />
 
 3. **El merge del paso 13, ¿Causó algún conflicto? ¿Por qué?**<br />
 
-No. Porqué el código de *master* no afectaba al código de la rama *styled* <br /><br />
+    No. Porque solo en una rama, la *styled* ocurrió un cambio en la misma línea de código por lo tanto se agrega la nueva y se reemplaza la vieja.<br /><br />
 
 
 4. **El merge del paso 19, ¿Causó algún conflicto? ¿Por qué?**<br />
 
-Si. Porque el fichero es pequeño y se ha modificado código muy cercano del fichero, en este caso el fichero entero en la rama </br>*htmlify* que afecta al código de la rama *styled* y GIT no sabe que código nos queremos quedar <br /><br />
+    Si. Ocurre porque en ambas ramas, *htmlify*  y *styled*  se realizaron modificaciones afectando las mismas líneas de código por tanto GIT no sabe con que código nos queremos quedar <br /><br />
 
 5. **El merge del paso 21, ¿Causó algún conflicto? ¿Por qué?**<br />
 
-No. Porqué el código de *styled* no afectaba al código de la rama *master* <br /><br />
+     No. Porque solo en una rama, la *styled* ocurrió un cambio en la misma línea de código. Ya que en el paso anterior se fusionó la rama *htmlify* con la *styled* <br /><br />
 
 
 6. **¿Qué comando o comandos utilizaste en el paso 25?**<br />
 
- <code>git log --graph --pretty=oneline</code> <br />
- Para personalizar el comando de forma sencila a nivel global: <br />
- <code>git config  --global alias.graph "log --graph --pretty=oneline</code> <br />
- <code>git graph</code> <br /><br />
+    <code>git log --graph --pretty=oneline</code> <br />
+    Para personalizar el comando de forma sencila a nivel global: <br />
+    <code>git config  --global alias.graph "log --graph --pretty=oneline</code> <br />
+    <code>git graph</code> <br /><br />
 
 7. **El merge del paso 26, ¿Podría ser fast forward? ¿Por qué?**<br />
-    Si podría serlo porque no hubo conflicto, simplemente no  preguntaría, haría el merge directamente<br /><br />
+    Si podría serlo porque no hubo conflicto, ya que la rama *title* no modifica las mismas líneas de código que la rama *styled*, simplemente no preguntaría, haría el merge directamente<br /><br />
 
 8. **¿Qué comando o comandos utilizaste en el paso 27?**<br />
 
